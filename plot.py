@@ -11,6 +11,8 @@ def plot_speedup_test(csv_path: Path):
     speedup_data = pd.DataFrame()
     speedup_data["hpx_par"] = data["hpx_seq"]/data["hpx_par"]
     speedup_data["hpx_seq"] = data["hpx_seq"]/data["hpx_seq"]
+    speedup_data["std_par"] = data["std_seq"]/data["std_par"]
+    speedup_data["std_seq"] = data["std_seq"]/data["std_seq"]
     speedup_data["n"] = data["n"]
 
     fig, ax = plt.subplots()
